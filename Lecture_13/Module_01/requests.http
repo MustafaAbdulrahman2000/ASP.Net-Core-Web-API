@@ -1,0 +1,66 @@
+@baseURL = https://localhost:7198
+
+
+###
+GET {{baseURL}}
+
+
+### Controller APIs
+
+###
+GET {{baseURL}}/api/controller-fake-errors/server-error
+
+###
+POST {{baseURL}}/api/controller-fake-errors/bad-request
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/controller-fake-errors/bad-request-no-body
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/controller-fake-errors/not-found
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/controller-fake-errors/unauthorized
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/controller-fake-errors/conflict
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/controller-fake-errors/business-rule-error
+Content-Type: application/json
+
+
+
+### Minimal APIs
+
+###
+GET {{baseURL}}/api/minimal-fake-errors/server-error
+
+###
+POST {{baseURL}}/api/minimal-fake-errors/bad-request
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/minimal-fake-errors/bad-request-no-body
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/minimal-fake-errors/not-found
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/minimal-fake-errors/unauthorized
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/minimal-fake-errors/conflict
+Content-Type: application/json
+
+###
+POST {{baseURL}}/api/minimal-fake-errors/business-rule-error
+Content-Type: application/json

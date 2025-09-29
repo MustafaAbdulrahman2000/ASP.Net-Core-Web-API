@@ -1,0 +1,61 @@
+@baseUrl =  https://localhost:7059
+
+@productId = 3
+
+
+###
+GET {{baseUrl}}/api/products?page=2&pageSize=10
+
+###
+GET {{baseUrl}}/api/products/{{productId}}
+If-None-Match: "erYZdzNG/I5VH7UOFgYoByRfrhKdWySyQTxOofqGPyY="
+
+###
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+    "name": "Cup",
+    "price": 24.99
+}
+
+###
+PUT {{baseUrl}}/api/products/{{productId}}
+Content-Type: application/json
+
+{
+    "name": "Cookies",
+    "price": 14.99
+}
+
+###
+DELETE {{baseUrl}}/api/products/{{productId}}
+
+
+
+###
+GET {{baseUrl}}/api/products-minimal
+
+###
+GET {{baseUrl}}/api/products-minimal/{{productId}}
+
+###
+POST {{baseUrl}}/api/products-minimal
+Content-Type: application/json
+
+{
+    "name": "Cup",
+    "price": 24.99
+}
+
+###
+PUT {{baseUrl}}/api/products-minimal/{{productId}}
+Content-Type: application/json
+
+{
+    "name": "Cookies",
+    "price": 14.99
+}
+
+###
+DELETE {{baseUrl}}/api/products-minimal/{{productId}}

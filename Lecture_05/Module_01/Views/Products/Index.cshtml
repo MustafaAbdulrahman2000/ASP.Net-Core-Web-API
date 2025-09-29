@@ -1,0 +1,33 @@
+@model IEnumerable<Module_01.Product>
+
+@{
+    ViewData["Title"] = "List All Products";
+}
+
+<a class="btn btn-primary mb-3" asp-action="Create"> Add Product </a>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th> Name </th>
+            <th class="text-end"> Price </th>
+            <th style="width: 180px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td> @product.Name </td>
+                <td class="text-end"> @product.Price.ToString("C") </td>
+                <td>
+                    <div class="btn-group btn-group-sm">
+                        <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@product.Id"> Edit  </a>
+                        <a class="btn btn-info" asp-action="Details" asp-route-id="@product.Id"> Details </a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@product.Id"> Delete </a>
+                    </div>
+                </td>
+            </tr>            
+        }
+    </tbody>
+</table>

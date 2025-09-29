@@ -1,0 +1,34 @@
+@baseURL = https://localhost:7184
+
+
+### GET sample action filter sync
+GET {{baseURL}}/api/products
+
+### GET sample action filter async
+GET {{baseURL}}/api/products
+
+### GET track action time filter sync global
+GET {{baseURL}}/api/products
+
+### GET track action time filter sync attribute class
+GET {{baseURL}}/api/products
+
+### GET track action time filter sync action filter attribute class
+GET {{baseURL}}/api/products
+
+### GET resource filter
+GET {{baseURL}}/api/products
+tenant-id: TenantA
+x-api-key: TenantAKey
+
+### GET result filter
+GET {{baseURL}}/api/products
+
+### GET exception filter
+GET {{baseURL}}/api/documents/1234
+
+### GET endpoint filter on products
+GET {{baseURL}}/api/products
+
+### GET endpoint filter on customers
+GET {{baseURL}}/api/customers

@@ -1,0 +1,32 @@
+@baseURL = https://localhost:7197
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+@jobId = 1e8f784b-da37-412f-a20d-4dca981d3a80
+
+
+### GET Minimal API
+GET {{baseURL}}/api/products
+
+### GET specific product by id
+GET {{baseURL}}/api/products/{{productId}}
+
+### POST Minimal API
+POST {{baseURL}}/api/products
+Content-Type: application/json
+
+{
+    "name": "keyboard",
+    "price": 50.88
+}
+
+### PUT Minimal API
+PUT {{baseURL}}/api/products/{{productId}}
+Content-Type: application/json
+
+{
+    "name": "chocolate bar",
+    "Price": 3.50
+}
+
+### DELETE Minimal API
+DELETE {{baseURL}}/api/products/{{productId}}
+

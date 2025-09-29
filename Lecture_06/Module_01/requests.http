@@ -1,0 +1,110 @@
+@baseURL = https://localhost:7288
+
+
+### GET Products by controller API
+GET {{baseURL}}/products/all 
+
+### GET Products by minimal API
+GET {{baseURL}}/products
+
+### GET Route table
+GET {{baseURL}}/route-table
+
+###
+GET {{baseURL}}/product/20
+
+###
+GET {{baseURL}}/date/2000-6-5
+
+###
+GET {{baseURL}}
+
+###
+GET {{baseURL}}/products
+
+###
+GET {{baseURL}}/user
+
+###
+GET {{baseURL}}/user/10
+
+###
+GET {{baseURL}}/abxcd
+
+###
+GET {{baseURL}}/aabxcd
+
+###
+GET {{baseURL}}/single/mustafa%20ahmed
+
+###
+GET {{baseURL}}/double/mustafa/ahmed/abdulrahman
+
+###
+GET {{baseURL}}/int/25
+
+###
+GET {{baseURL}}/bool/true
+
+###
+GET {{baseURL}}/datetime/2000-6-5
+
+###
+GET {{baseURL}}/datetime/2000-6-5%2019:30
+
+###
+GET {{baseURL}}/decimal/2.30
+
+###
+GET {{baseURL}}/double/3.56
+
+###
+GET {{baseURL}}/float/9.77
+
+###
+GET {{baseURL}}/guid/6B29FC40-CA47-1067-B31D-00DD010662DA
+
+###
+GET {{baseURL}}/long/90
+
+###
+GET {{baseURL}}/minlength/ahmed
+
+###
+GET {{baseURL}}/maxlength/mustafa
+
+###
+GET {{baseURL}}/length/abcdefghijkl
+
+###
+GET {{baseURL}}/lengthrange/abcdefghijklmn
+
+###
+GET {{baseURL}}/min/20
+
+###
+GET {{baseURL}}/max/120
+
+###
+GET {{baseURL}}/range/50
+
+###
+GET {{baseURL}}/alpha/mustafa
+
+###
+GET {{baseURL}}/regex/514-14-8905
+
+###
+GET {{baseURL}}/required/mariam
+
+###
+GET {{baseURL}}/custom/11
+
+###
+GET {{baseURL}}/order/100
+
+###
+GET {{baseURL}}/details/Mustafa Ahmed Abdulrahman
+
+###
+GET {{baseURL}}/generate

@@ -1,0 +1,129 @@
+@baseURL = https://localhost:7183
+
+
+### Minimal API
+GET {{baseURL}}/product-minimal/40
+
+### Minimal API version 1
+GET {{baseURL}}/product-minimal-1/40
+
+### Minimal API version 2
+GET {{baseURL}}/product-minimal-2/40?id=20
+
+### Controller API
+GET {{baseURL}}/product-controller/40
+
+
+
+### Minimal API query string
+GET {{baseURL}}/product-minimal?page=1&pageSize=10
+
+### Minimal API query string version 1
+GET {{baseURL}}/product-minimal-1?page=1&pageSize=10
+
+### Multiple parameters bound into complex type Minimal API
+GET {{baseURL}}/product-minimal-asparameters?query=soda&page=1&pageSize=10
+
+### Minimal API array in query string
+GET {{baseURL}}/product-minimal-array?ids=27a65726-a07f-484c-9b0c-334611ec1c18&ids=69a0b1fe-3c20-4a4a-bc57-13a8078d8e00
+
+### Custom parsing Minimal API
+GET {{baseURL}}/date-range-minimal?dateRange=2025-01-01,2025-12-31
+
+### Controller API query string
+GET {{baseURL}}/product-controller?page=1&pageSize=10
+
+### Multiple parameters bound into complex type Controller API
+GET {{baseURL}}/product-controller-complex-query?query=soda&page=1&pageSize=10
+
+### Controller API array in query string
+GET {{baseURL}}/product-controller-array?ids=27a65726-a07f-484c-9b0c-334611ec1c18&ids=69a0b1fe-3c20-4a4a-bc57-13a8078d8e00
+
+### Custom parsing Controller API
+GET {{baseURL}}/date-range-controller?dateRange=2025-01-01,2025-12-31
+
+
+
+### Minimal API headers
+GET {{baseURL}}/product-minimal
+X-Api-Version: v1
+
+### Controller API headers
+GET {{baseURL}}/product-controller
+X-Api-Version: v1
+
+
+
+### Minimal API forms
+GET {{baseURL}}/product-minimal
+Content-Type: application/x-www-form-urlencoded
+
+name=soda&price=2.89
+
+### File upload Minimal API
+POST {{baseURL}}/upload-minimal
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file";filename="Mustafa.jpeg"
+Content-Type: image/jpeg
+
+< F:/Mustafa.jpeg
+--MyBoundary--
+
+### Controller API forms
+GET {{baseURL}}/product-minimal
+Content-Type: application/x-www-form-urlencoded
+
+name=soda&price=3.89
+
+### File upload Controller API
+POST {{baseURL}}/upload-controller
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file";filename="Mustafa.jpeg"
+Content-Type: image/jpeg
+
+< F:/Mustafa.jpeg
+--MyBoundary--
+
+
+
+### Minimal API Json body
+POST {{baseURL}}/product-minimal
+Content-Type: application/json
+
+{
+    "name": "soda",
+    "price": 3.99
+}
+
+### Controller API Json body
+POST {{baseURL}}/product-controller
+Content-Type: application/json
+
+{
+    "name": "soda",
+    "price": 3.99
+}
+
+### Controller API Xml body
+POST {{baseURL}}/product-controller
+Content-Type: application/xml
+Accept: application/xml
+
+<ProductRequest>
+    <Name> Soda </Name>
+    <Price> 4.88 </Price>
+</ProductRequest>
+
+
+
+### Minimal API cookies
+GET {{baseURL}}/mn/preferences
+Cookie: theme=dark;language=AR;timeZone=America/Toronto
+
+### Controller API cookies
+GET {{baseURL}}/preferences
+Cookie: theme=dark;language=AR;timeZone=America/Toronto

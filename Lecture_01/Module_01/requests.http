@@ -1,0 +1,17 @@
+### Get Authors
+
+GET https://localhost:7274/authors/mustafa-ahmad?sort=asc
+x-API-Version: v1.5
+
+{
+    "name": "Mustafa Ahmad",
+    "Age": 25,
+    "Education": "Computer Science",
+    "Skills": [
+        "C#",
+        "SQL",
+        "Linq",
+        "EF Core",
+        "ASP.Net Core"
+    ]
+}

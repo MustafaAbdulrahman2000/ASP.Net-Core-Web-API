@@ -1,0 +1,5 @@
+@baseUrl = https://localhost:7000
+
+
+### GET Booking data
+GET {{baseUrl}}/api/bookings

@@ -1,0 +1,140 @@
+@baseUrl = https://localhost:7289
+
+@projectId = f5aae296-97dc-4a2b-a15a-b20ce4780d3a
+@taskId = b7cc98df-bcce-4bed-be26-d734797549c8
+
+
+###
+
+POST {{baseUrl}}/api/token/generate
+content-type: application/json
+
+{
+  "Id": "79410514-0136-4442-be9b-01f097c57f7a",
+  "FirstName": "Primary",
+  "LastName": "Manager",
+  "Email": "pm@localhost",
+  "Permissions": [
+    "project:create",
+    "project:read",
+    "project:update",
+    "project:delete",
+    "project:assign_member",
+    "project:manage_budget",
+    "task:create",
+    "task:read",
+    "task:update",
+    "task:delete",
+    "task:assign_user",
+    "task:update_status"
+  ],
+  "Roles": [
+    "ProjectManager"
+  ]
+}
+
+###
+POST {{baseUrl}}/api/token/generate
+content-type: application/json
+
+{
+  "Id": "b1c2d3e4-f5g6-7h8i-9j0k-1l2m3n4o5p6q",
+  "FirstName": "John",
+  "LastName": "Doe",
+  "Email": "john.doe@localhost",
+  "Permissions": [
+    "project:read",
+    "task:read",
+    "task:update_status",
+    "task:comment"
+  ],
+  "Roles": [
+    "TeamMember"
+  ]
+}
+
+###
+POST {{baseUrl}}/api/token/generate
+content-type: application/json
+
+{
+  "Id": "c7d8e9f0-g1h2-i3j4-k5l6-m7n8o9p0q1r2",
+  "FirstName": "Emily",
+  "LastName": "White",
+  "Email": "emily.white@localhost",
+  "Permissions": [
+    "project:read",
+    "task:read"
+  ],
+  "Roles": [
+    "Stakeholder"
+  ]
+}
+
+###
+
+###
+GET {{baseUrl}}/api/projects
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OTQxMDUxNC0wMTM2LTQ0NDItYmU5Yi0wMWYwOTdjNTdmN2EiLCJlbWFpbCI6InBtQGxvY2FsaG9zdCIsImZhbWlseV9uYW1lIjoiTWFuYWdlciIsImdpdmVuX25hbWUiOiJQcmltYXJ5Iiwicm9sZSI6IlByb2plY3RNYW5hZ2VyIiwiUGVybWlzc2lvbiI6WyJwcm9qZWN0OmNyZWF0ZSIsInByb2plY3Q6cmVhZCIsInByb2plY3Q6dXBkYXRlIiwicHJvamVjdDpkZWxldGUiLCJwcm9qZWN0OmFzc2lnbl9tZW1iZXIiLCJwcm9qZWN0Om1hbmFnZV9idWRnZXQiLCJ0YXNrOmNyZWF0ZSIsInRhc2s6cmVhZCIsInRhc2s6dXBkYXRlIiwidGFzazpkZWxldGUiLCJ0YXNrOmFzc2lnbl91c2VyIiwidGFzazp1cGRhdGVfc3RhdHVzIl0sIm5iZiI6MTc1NTYzODExNiwiZXhwIjoxNzU1NjM4NzE2LCJpYXQiOjE3NTU2MzgxMTYsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6ImxvY2FsaG9zdCJ9.ZondAK6kcwavAH6UYRN5soDGZjR8yfckZZrMPGecTXc
+
+###
+GET {{baseUrl}}/api/projects
+
+
+###
+GET {{baseUrl}}/api/projects/{{projectId}}
+
+
+###
+POST {{baseUrl}}/api/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjN2Q4ZTlmMC1nMWgyLWkzajQtazVsNi1tN244bzlwMHExcjIiLCJlbWFpbCI6ImVtaWx5LndoaXRlQGxvY2FsaG9zdCIsImZhbWlseV9uYW1lIjoiV2hpdGUiLCJnaXZlbl9uYW1lIjoiRW1pbHkiLCJyb2xlIjoiU3Rha2Vob2xkZXIiLCJQZXJtaXNzaW9uIjpbInByb2plY3Q6cmVhZCIsInRhc2s6cmVhZCJdLCJuYmYiOjE3NTU2MzYyMzQsImV4cCI6MTc1NTYzNjgzNCwiaWF0IjoxNzU1NjM2MjM0LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.Lqo4HyNvS_7uYYfZz7_MAXDfwgoInEMuIgKpDccnBbc
+
+###
+PUT {{baseUrl}}/api/projects/{{projectId}}
+Content-Type: application/json
+
+
+###
+DELETE {{baseUrl}}/api/projects/{{projectId}}
+
+
+###
+POST {{baseUrl}}/api/projects/{{projectId}}/members
+
+###
+GET {{baseUrl}}/api/projects/{{projectId}}/budget
+
+
+###
+POST {{baseUrl}}/api/projects/tasks
+Content-Type: application/json
+
+
+###
+GET {{baseUrl}}/api/projects/tasks/{{taskId}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjN2Q4ZTlmMC1nMWgyLWkzajQtazVsNi1tN244bzlwMHExcjIiLCJlbWFpbCI6ImVtaWx5LndoaXRlQGxvY2FsaG9zdCIsImZhbWlseV9uYW1lIjoiV2hpdGUiLCJnaXZlbl9uYW1lIjoiRW1pbHkiLCJyb2xlIjoiU3Rha2Vob2xkZXIiLCJQZXJtaXNzaW9uIjpbInByb2plY3Q6cmVhZCIsInRhc2s6cmVhZCJdLCJuYmYiOjE3NTU2MzYyMzQsImV4cCI6MTc1NTYzNjgzNCwiaWF0IjoxNzU1NjM2MjM0LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.Lqo4HyNvS_7uYYfZz7_MAXDfwgoInEMuIgKpDccnBbc
+###
+PUT {{baseUrl}}/api/projects/tasks/{{taskId}}
+Content-Type: application/json
+
+
+###
+DELETE {{baseUrl}}/api/projects/tasks/{{taskId}}
+
+###
+POST {{baseUrl}}/api/projects/tasks/{{taskId}}/assign
+Content-Type: application/json
+
+
+###
+PUT {{baseUrl}}/api/projects/tasks/{{taskId}}/status
+Content-Type: application/json
+
+###
+POST {{baseUrl}}/api/token/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "7a6f23b4e1d04c9a8f5b6d7c8a9e01f1"
+}

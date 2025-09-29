@@ -1,0 +1,135 @@
+@baseUrl = https://localhost:7233
+
+@projectId = 
+@taskId = 
+@teamMember1 = 22222222-2222-2222-2222-222222222222
+@teamMember1 = 55555555-5555-5555-5555-555555555555
+
+@tokenProjectManager = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMTExMTExMS0xMTExLTExMTEtMTExMS0xMTExMTExMTExMTEiLCJlbWFpbCI6Imlzc2FtLmFAbG9jYWxob3N0IiwiZmFtaWx5X25hbWUiOiJBLiIsImdpdmVuX25hbWUiOiJJc3NhbSIsInJvbGUiOiJQcm9qZWN0TWFuYWdlciIsInBlcm1pc3Npb24iOlsicHJvamVjdDpjcmVhdGUiLCJwcm9qZWN0OnJlYWQiLCJwcm9qZWN0OnVwZGF0ZSIsInByb2plY3Q6ZGVsZXRlIiwicHJvamVjdDptYW5hZ2VfYnVkZ2V0IiwidGFzazpjcmVhdGUiLCJ0YXNrOnJlYWQiLCJ0YXNrOnVwZGF0ZSIsInRhc2s6ZGVsZXRlIiwidGFzazphc3NpZ25fdXNlciIsInRhc2s6dXBkYXRlX3N0YXR1cyJdLCJuYmYiOjE3NTYwOTY2NDMsImV4cCI6MjUzNDAyMjkwMDAwLCJpYXQiOjE3NTYwOTY2NDMsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6ImxvY2FsaG9zdCJ9.CeCJiyr5fS2_P5GKBZtaSDfctSm3zsh70EY9lPCN-3g
+@tokenTeamMember = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NTU1NTU1NS01NTU1LTU1NTUtNTU1NS01NTU1NTU1NTU1NTUiLCJlbWFpbCI6InNhcmFoLmxlZUBsb2NhbGhvc3QiLCJmYW1pbHlfbmFtZSI6IkxlZSIsImdpdmVuX25hbWUiOiJTYXJhaCIsInJvbGUiOiJUZWFtTWVtYmVyIiwicGVybWlzc2lvbiI6WyJwcm9qZWN0OnJlYWQiLCJ0YXNrOnJlYWQiLCJ0YXNrOnVwZGF0ZV9zdGF0dXMiXSwibmJmIjoxNzU2MDk2Njc0LCJleHAiOjI1MzQwMjI5MDAwMCwiaWF0IjoxNzU2MDk2Njc0LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.Ax9DmN9GhovYbhmtEFahq6hhnY59zzMbCHzWw2X1prg
+@tokenTeamMember2 = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMjIyMjIyMi0yMjIyLTIyMjItMjIyMi0yMjIyMjIyMjIyMjIiLCJlbWFpbCI6ImpvaG4uZG9lQGxvY2FsaG9zdCIsImZhbWlseV9uYW1lIjoiRG9lIiwiZ2l2ZW5fbmFtZSI6IkpvaG4iLCJyb2xlIjoiVGVhbU1lbWJlciIsInBlcm1pc3Npb24iOlsicHJvamVjdDpyZWFkIiwidGFzazpyZWFkIiwidGFzazp1cGRhdGVfc3RhdHVzIl0sIm5iZiI6MTc1NjA5NjY5OCwiZXhwIjoyNTM0MDIyOTAwMDAsImlhdCI6MTc1NjA5NjY5OCwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0In0.X32JReXXAsOunUOAa0U1_AJfmQ81FbD2VZeMA9EIjeo
+@tokenStakeholder = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzMzMzMzMzMy0zMzMzLTMzMzMtMzMzMy0zMzMzMzMzMzMzMzMiLCJlbWFpbCI6ImVtaWx5LndoaXRlQGxvY2FsaG9zdCIsImZhbWlseV9uYW1lIjoiV2hpdGUiLCJnaXZlbl9uYW1lIjoiRW1pbHkiLCJyb2xlIjoiU3Rha2Vob2xkZXIiLCJwZXJtaXNzaW9uIjpbInByb2plY3Q6cmVhZCIsInRhc2s6cmVhZCJdLCJuYmYiOjE3NTYwOTY3MjksImV4cCI6MjUzNDAyMjkwMDAwLCJpYXQiOjE3NTYwOTY3MjksImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6ImxvY2FsaG9zdCJ9.f_zAxL1A0HOwtfIBPDSrgqqNh6NB9DI3av-KMOQ1qe0
+
+###
+GET {{baseUrl}}/openapi/v1.json
+
+###
+GET {{baseUrl}}/openapi/v2.json
+
+
+###
+GET {{baseUrl}}/api/v1/projects
+Authorization: Bearer {{tokenProjectManager}}
+
+###
+GET {{baseUrl}}/api/v2/projects
+Authorization: Bearer {{tokenProjectManager}}
+
+
+###
+GET {{baseUrl}}/api/v1/projects/{{projectId}}
+Authorization: Bearer {{tokenProjectManager}}
+
+
+###
+GET {{baseUrl}}/api/v2/projects/{{projectId}}
+Authorization: Bearer {{tokenProjectManager}}
+
+###
+POST {{baseUrl}}/api/v1/projects
+Content-Type: application/json
+Authorization: Bearer {{tokenProjectManager}}
+
+{
+  "name": "Test Project",
+  "description": "Demo project",
+  "expectedStartDate": "2025-06-01T00:00:00Z",
+  "budget": 10000
+}
+
+###
+PUT {{baseUrl}}/api/v1/projects/{{projectId}}
+Content-Type: application/json
+Authorization: Bearer {{tokenProjectManager}}
+
+{ 
+  "name": "Updated Project",
+  "description": "Updated description",
+  "expectedStartDate": "2025-06-05T00:00:00Z"
+}
+
+###
+DELETE {{baseUrl}}/api/v1/projects/{{projectId}}
+Authorization: Bearer {{tokenProjectManager}}
+
+###
+PUT {{baseUrl}}/api/v1/projects/{{projectId}}/budget
+Content-Type: application/json
+Authorization: Bearer {{tokenProjectManager}}
+
+{
+  "budget": 5440000
+}
+
+###
+PUT {{baseUrl}}/api/v1/projects/{{projectId}}/completion
+Content-Type: application/json
+Authorization: Bearer {{tokenProjectManager}}
+
+{ 
+  "endDate": "2025-06-30T00:00:00Z"
+}
+
+###
+POST {{baseUrl}}/api/v1/projects/{{projectId}}/tasks
+Content-Type: application/json
+Authorization: Bearer {{tokenProjectManager}}
+
+{
+  "title": "Design UI",
+  "description": "Initial wireframe",
+  "assignedUserId": "{{teamMember1}}"
+}
+
+###
+GET {{baseUrl}}/api/v1/projects/{{projectId}}/tasks/{{taskId}}
+Authorization: Bearer {{tokenProjectManager}}
+
+###
+PUT {{baseUrl}}/api/v1/projects/{{projectId}}/tasks/{{taskId}}
+Content-Type: application/json
+Authorization: Bearer {{tokenProjectManager}}
+
+{ 
+  "title": "Updated UI 222",
+  "description": "Updated wireframe dsfdf",
+  "status": 1
+}
+
+###
+DELETE {{baseUrl}}/api/v1/projects/{{projectId}}/tasks/{{taskId}}
+Authorization: Bearer {{tokenProjectManager}}
+
+###
+PUT {{baseUrl}}/api/v1/projects/{{projectId}}/tasks/{{taskId}}/assignment
+Content-Type: application/json
+Authorization: Bearer {{tokenProjectManager}}
+
+{
+  "taskId": "{{taskId}}",
+  "userId": "{{teamMember1}}"
+}
+
+###
+PUT {{baseUrl}}/api/v1/projects/{{projectId}}/tasks/{{taskId}}/status
+Content-Type: application/json
+Authorization: Bearer {{tokenProjectManager}}
+
+{
+  "taskId": "{{taskId}}",
+  "status": "Completed"
+}
+
+
+###
+POST {{baseUrl}}/token/generate

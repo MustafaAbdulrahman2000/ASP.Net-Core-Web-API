@@ -1,0 +1,22 @@
+@baseUrl = https://localhost:7224
+@bidId = 37f2c16b-1695-44be-9dab-93a21e74b57a
+
+### GET All bids
+GET {{baseUrl}}/api/bids
+
+### GET Bid by id
+GET {{baseUrl}}/api/bids/{{bidId}}
+
+### POST Create bid
+POST {{baseUrl}}/api/bids
+Content-Type: application/json
+
+{
+    "amount": 150.00,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "telephone": "+1234567890",
+    "location": "Amman",
+    "address": "123 Rainbow Street"
+}

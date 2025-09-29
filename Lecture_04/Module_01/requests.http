@@ -1,0 +1,23 @@
+@baseURL = https://localhost:7259
+
+
+### GET [1] Use Middleware 
+{{baseURL}}
+
+### GET [2] Run Middleware 
+{{baseURL}}
+
+### GET branch [1] 
+{{baseURL}}/branch1
+
+### GET branch [2]
+{{baseURL}}/branch2
+
+### GET Legacy checkout.
+{{baseURL}}/checkout
+
+### GET Modern checkout.
+{{baseURL}}/checkout?mode=new
+
+### GET Branch [1].
+{{baseURL}}/branch1

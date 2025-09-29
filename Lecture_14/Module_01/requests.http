@@ -1,0 +1,22 @@
+@baseUrl = https://localhost:7188
+
+
+### POST new product
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+    "name": "Keyboard",
+    "description": "New and efficient keyboard.",
+    "sku" : "PRD-00001",
+    "price": 95.99,
+    "stockQuantity": 1,
+    "launchDate": "2025-08-19",
+    "category" : "Electronics", 
+    "imageUrl": "https://cdn.example.com/products/keyboard.jpg",
+    "weight": 0.4,
+    "warrantyPeriodMonths": 24,
+    "isReturnable": true,
+    "returnPolicyDescription": "Return accepted within 30 days with receipt.",
+    "tags": ["Keyboard", "Accessories", "PCs"]
+}

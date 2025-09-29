@@ -1,0 +1,21 @@
+@model Module_01.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3"> Name </dt>
+            <dd class="col-sm-9"> @Model.Name</dd>
+
+            <dt class="col-sm-3"> Price </dt>
+            <dd class="col-sm-9"> @Model.Price </dd>
+        </dl>
+
+        <a asp-action="Index" class="btn btn-secondary"> Back To List </a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary"> Edit </a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger"> Delete </a>
+    </div>
+</div>

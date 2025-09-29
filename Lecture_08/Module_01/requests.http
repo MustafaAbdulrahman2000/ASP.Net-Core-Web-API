@@ -1,0 +1,88 @@
+@baseURL = https://localhost:7120
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+@jobId = 85cb6f48-6c47-4931-818f-87af84e5d7a1
+
+### 
+GET {{baseURL}}/api/product
+
+### 
+POST {{baseURL}}/api/product
+
+### 
+PUT {{baseURL}}/api/product
+
+### 
+DELETE {{baseURL}}/api/product
+
+
+
+### Endpoints
+### OPTIONS
+OPTIONS {{baseURL}}/api/product
+
+### HEAD
+HEAD {{baseURL}}/api/product/{{productId}}
+
+### GET without reviews
+GET {{baseURL}}/api/product/{{productId}}
+Accept: application/xml
+
+### GET with reviews
+GET {{baseURL}}/api/product/{{productId}}?includeReviews=true
+
+### GET all
+GET {{baseURL}}/api/product?page=1&pageSize=5
+
+### POST
+POST {{baseURL}}/api/product
+Content-Type: application/json
+
+{
+    "name": "keyboard",
+    "price": 50.88
+}
+
+### PUT
+PUT {{baseURL}}/api/product/{{productId}}
+Content-Type: application/json
+
+{
+    "name": "chocolate bar",
+    "Price": 3.50
+}
+
+### DELETE
+DELETE {{baseURL}}/api/product/{{productId}}
+
+### PATCH
+PATCH  {{baseURL}}/api/product/{{productId}}
+Content-Type: application/json-patch+json
+
+[
+    {
+        "op": "replace",
+        "path": "/price",
+        "value": 4.87
+    }
+]
+
+### Process
+POST {{baseURL}}/api/product/process 
+
+### Status
+GET {{baseURL}}/api/product/status/{{jobId}}
+
+### InMemory file
+GET {{baseURL}}/api/product/csv
+
+### Physical file
+GET {{baseURL}}/api/product/physical-csv-file
+
+### Redirect
+GET {{baseURL}}/api/product/products-legacy
+
+### Redirect permanent
+GET {{baseURL}}/api/product/legacy-products
+
+### Custom formatter
+GET {{baseURL}}/api/product/products-table

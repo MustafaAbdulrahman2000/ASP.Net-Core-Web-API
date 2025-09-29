@@ -1,0 +1,6 @@
+@baseUrl = https://localhost:7103
+@orderId = f5aae296-97dc-4a2b-a15a-b20ce4780d3a
+
+
+### GET Processed order
+GET {{baseUrl}}/api/orders/{{orderId}}

@@ -1,0 +1,56 @@
+@baseURL = https://localhost:7141
+
+### GET value from command line argument provider
+GET {{baseURL}}/SECRETKEY
+
+### GET value from user secrets
+GET {{baseURL}}/KEY1
+
+### GET value from json file provider
+GET {{baseURL}}/Name
+
+### GET value from ini file provider
+GET {{baseURL}}/ini/General:Age
+
+### GET value from xml file provider
+GET {{baseURL}}/Faculty
+
+### GET value from in memory collection provider
+GET {{baseURL}}/in-memory/Faculty
+
+
+
+
+
+
+### GET value by key
+GET {{baseURL}}/get-value-by-key
+
+### GET value by path
+GET {{baseURL}}/get-value-by-path
+
+### GET connection string by built-in method
+GET {{baseURL}}/get-connection-string 
+
+### GET value by get value built-in method
+GET {{baseURL}}/get-value
+
+### GET hierarchy settings by get method
+GET {{baseURL}}/get
+
+### GET hierarchy settings by bind method
+GET {{baseURL}}/bind
+
+
+
+
+
+
+### GET hierarchy settings by IOptions [singleton take at startup]
+GET {{baseURL}}/ioptions
+
+### GET hierarchy settings by IOptionsSnapshot [scoped take per request]
+GET {{baseURL}}/ioptions-snapshot
+
+### GET hierarchy settings by IOptionsMonitor [reload on change]
+GET {{baseURL}}/ioptions-monitor

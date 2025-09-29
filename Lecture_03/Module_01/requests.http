@@ -1,0 +1,22 @@
+@baseURL = https://localhost:7023
+
+### GET  Cairo weather info
+{{baseURL}}/weather/city/Cairo
+
+### GET single dependency
+{{baseURL}}/single
+
+### GET multiple dependencies
+{{baseURL}}/multiple
+
+### GET number of IDependency instances
+{{baseURL}}/idependency-registrations
+
+### GET keyed service version 2
+{{baseURL}}/v2
+
+### GET factory instantiation 
+{{baseURL}}/pay/100
+
+### Get service lifetimes
+{{baseURL}}/check

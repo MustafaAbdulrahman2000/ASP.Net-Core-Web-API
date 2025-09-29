@@ -1,0 +1,4 @@
+@baseURL = https://localhost:7244
+
+### GET Environment Variable
+GET {{baseURL}}/APISECRETKEY
